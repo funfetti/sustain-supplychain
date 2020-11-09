@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sustain_app__Taxi_Limo_kg_CO2e_per_Distance__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Supplied conversion factor for taxi and limousine emissions</inlineHelpText>
+    <label>Taxi/Limo (kg CO2e / Distance Unit)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>7</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

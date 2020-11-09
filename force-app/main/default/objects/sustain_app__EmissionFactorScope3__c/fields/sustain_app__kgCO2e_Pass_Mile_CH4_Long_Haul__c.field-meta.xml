@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sustain_app__kgCO2e_Pass_Mile_CH4_Long_Haul__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>CH4 emissions per passenger-mile in CO2e from long-haul flights.</inlineHelpText>
+    <label>CH4/Passenger-mile Long-Haul (kg CO2e)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>7</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

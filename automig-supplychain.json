@@ -1,0 +1,29 @@
+{
+    "outputDir": "./demo-data",
+    "targets": [
+        {
+            "target": "query",
+            "object": "Account"
+        },
+        {
+            "target": "query",
+            "object": "Bill_of_Materials__c"
+        },
+        {
+            "target": "query",
+            "object": "BoM_Line__c"
+        },
+        {
+            "target": "query",
+            "object": "Contacts"
+        },
+        {
+            "target": "query",
+            "object": "Item__c"
+        },
+        {
+            "target": "query",
+            "object": "Supplier_Item__c"
+        }
+    ]
+}

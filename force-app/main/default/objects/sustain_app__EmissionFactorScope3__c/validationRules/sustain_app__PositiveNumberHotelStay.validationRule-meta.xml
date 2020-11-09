@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sustain_app__PositiveNumberHotelStay</fullName>
+    <active>true</active>
+    <errorConditionFormula>sustain_app__Hotel_Stay_Factor__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>sustain_app__Hotel_Stay_Factor__c</errorDisplayField>
+    <errorMessage>Hotel Stay Impact (CO2e kg/n) must be zero or greater.</errorMessage>
+</ValidationRule>

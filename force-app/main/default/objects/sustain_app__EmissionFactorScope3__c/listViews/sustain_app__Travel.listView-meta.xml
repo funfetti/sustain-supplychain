@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sustain_app__Travel</fullName>
+    <columns>NAME</columns>
+    <columns>sustain_app__Emission_Factor_Update_Year__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>sustain_app__EmissionFactorScope3__c.sustain_app__Travel</value>
+    </filters>
+    <label>General Stay Factors</label>
+</ListView>

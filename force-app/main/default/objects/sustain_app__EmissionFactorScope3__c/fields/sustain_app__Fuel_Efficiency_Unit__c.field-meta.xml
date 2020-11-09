@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sustain_app__Fuel_Efficiency_Unit__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Fuel Efficiency Unit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unit of measurement for fuel efficiency.</inlineHelpText>
+    <label>Fuel Efficiency Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Miles per Gallon</fullName>
+                <default>false</default>
+                <label>Miles per Gallon</label>
+            </value>
+            <value>
+                <fullName>L per 100 km</fullName>
+                <default>false</default>
+                <label>L per 100 km</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
