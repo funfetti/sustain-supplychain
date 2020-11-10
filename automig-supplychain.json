@@ -15,7 +15,7 @@
         },
         {
             "target": "query",
-            "object": "Contacts"
+            "object": "Contact"
         },
         {
             "target": "query",
@@ -23,7 +23,15 @@
         },
         {
             "target": "query",
+            "object": "RecordType"
+        },
+        {
+            "target": "query",
             "object": "Supplier_Item__c"
+        },
+        {
+            "target": "query",
+            "object": "sustain_app__EmissionFactorScope3__c"
         }
     ]
 }

@@ -2,21 +2,6 @@
 
 # run chmod u+x scratch-bash.sh
 # to actually execute: bash scratch-bash.sh
-#
-#your project-scratch-def.json should look something like this
-# {
-#  "orgName": "sustainability cloud scratch",
-#  "edition": "Developer",
-#  "features": [
-#    "DevelopmentWave",
-#    "SustainabilityCloud"
-#  ]
-# }
-#
-# need to add in 
-# - copy in new project-scratch-def.json
-# - copy in data 
-# 
 
 # get alias from user 
 echo "name your sustainability scratch org:"
@@ -44,21 +29,22 @@ sfdx force:user:permset:assign -n SustainabilityAppAuditor
 sfdx force:user:permset:assign -n SustainabilityAppManager
 sfdx force:user:permset:assign -n SustainabilityCloud
 
-# make the EA dashboards populate correctly 
-#sfdx shane:user:permset:assign -l User -g Integration -n SustainabilityAnalytics
+#load configs 
+sfdx force:source:push 
 
 #load data
-#sfdx automig:load -d demo-data/ --concise --mappingobjects RecordType:DeveloperName,sustain_app__EmissionFactorElectricity__c:Name,sustain_app__EmissionFactorOther__c:Name,sustain_app__EmissionFactorScope3__c:Name
+sfdx automig:load -d demo-data -m RecordType:DeveloperName,sustain_app__EmissionFactorScope3__c:Name
 
+# to dump data
+# sfdx automig:dump --u <usrname> --f automig-supplychain.json
+
+
+# make the EA dashboards populate correctly 
+#sfdx shane:user:permset:assign -l User -g Integration -n SustainabilityAnalytics
 #create EA apps
 #sfdx analytics:app:create -m Sustainability  
 #sfdx analytics:app:create -m Sustainability_Audit -a 
 
-# alrighty lets push source
-# make sure wave folder is deleted or empty!!! 
-#sfdx force:source:push 
-
-# may need to separately push profile? here?
-
 # open sesame
-sfdx force:org:open -p /lightning/app/c__Sustainability_Demo_Console
+echo "open sesame..."
+sfdx force:org:open
