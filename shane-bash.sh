@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
 
-# to initiate run $ chmod u+x scratch-bash.sh
-# to actually execute: $ bash scratch-bash.sh
-
-# to dump data
-# sfdx automig:dump --u <usrname> --f automig-supplychain.json
-
-# get alias from user 
-echo "name your sustainability scratch org:"
-read sname
-
-echo "your org is $sname"
-echo creating your scratch org... 
-sfdx force:org:create -f config/project-scratch-def.json -s -a $sname
-
-# install 1.11.0.5
-sfdx force:package:install -p 04t3k000001qBJ3AAM -w 20
-
-### PSL/Perms 
-# using shane's plugins https://github.com/mshanemc/shane-sfdx-plugins
-
 sfdx shane:user:psl -l User -g User -n sustain_app_SustainabilityCloudPsl
 sfdx shane:user:psl -l User -g User -n InsightsInboxAdminAnalyticsPsl
 

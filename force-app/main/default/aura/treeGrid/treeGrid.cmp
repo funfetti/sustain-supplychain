@@ -1,0 +1,40 @@
+<aura:component controller="SampleAuraController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+<aura:attribute type="Account[]" name="acctList"/>
+<aura:attribute name="gridColumns" type="List" />
+<aura:attribute name="gridColumns2" type="List" />
+<aura:attribute name="gridColumns3" type="List" />
+<aura:attribute name="gridData" type="Object" />
+<aura:attribute name="gridData2" type="Object" />
+<aura:attribute name="gridData3" type="Object" />
+<aura:attribute name="selectedRows" type="list" />
+<aura:attribute name="selectedRows2" type="list" />
+<aura:attribute name="selectedRows3" type="list" />
+
+<aura:attribute name="gridExpandedRows" type="Object" />
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+<!--iconName="standard:account"-->
+<lightning:card>
+    <aura:set attribute="actions">
+        <lightning:buttonIcon iconName="utility:down" variant="border-filled" alternativeText="Show More"/>
+    </aura:set>
+    <p class="slds-p-horizontal_small">
+        <div style="padding-left: 5%" class="slds-text-heading_medium">Accounts and Supplier Items</div>
+
+        <div class="slds-m-around_xx-large">
+            <lightning:treeGrid aura:id="accTree" columns="{!v.gridColumns}" data="{!v.gridData}" keyField="Id" hideCheckboxColumn  = "true"/>
+        </div>
+        <div style="padding-left: 5%" class="slds-text-heading_medium">Items and Supplier Items</div>
+
+        <div class="slds-m-around_xx-large">
+            <lightning:treeGrid aura:id="itmTree" columns="{!v.gridColumns2}" data="{!v.gridData2}" keyField="Id" hideCheckboxColumn  = "true"/>
+        </div>
+        <div style="padding-left: 5%" class="slds-text-heading_medium">Items and BOM Line Items</div>
+
+        <div class="slds-m-around_xx-large">
+            <lightning:treeGrid aura:id="BOMTree" columns="{!v.gridColumns3}" data="{!v.gridData3}" keyField="Id" hideCheckboxColumn  = "true"/>
+        </div>
+    </p>
+</lightning:card>
+
+</aura:component>
